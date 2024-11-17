@@ -56,8 +56,8 @@
                 },
                 {
                     "nome": "info_01",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
                         "imagem": "C"
@@ -131,8 +131,8 @@
                 },
                 {
                     "nome": "info_01",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
                         "imagem": "C"
@@ -140,65 +140,11 @@
                 },
                 {
                     "nome": "info_02",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
                         "imagem": "D"
-                    }
-                },
-                {
-                    "nome": "info_03",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Mais do que um sentimento que nos une. É o nosso propósito como grupo, nossa razão de existir.",
-                        "imagem": "B"
-                    }
-                },
-                {
-                    "nome": "info_04",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "urso",
-                        "imagem": "info-imagem-01"
-                    }
-                },
-                {
-                    "nome": "info_05",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
-                    }
-                },
-                {
-                    "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
-                    }
-                },
-                {
-                    "nome": "video_btn_01",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_01",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_02",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_02",
-                        "video": "01"
                     }
                 }
             ]
@@ -234,7 +180,7 @@
                 {
                     "nome": "info_02",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "food",
                     "info": {
                         "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
                         "imagem": "D"
@@ -261,7 +207,7 @@
                 {
                     "nome": "info_05",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "food",
                     "info": {
                         "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
                         "imagem": "E"
@@ -269,8 +215,8 @@
                 },
                 {
                     "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
                         "imagem": "F"
@@ -512,7 +458,7 @@
                 {
                     "nome": "info_07",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -660,7 +606,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -799,7 +745,7 @@
                 {
                     "nome": "info_07",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -853,7 +799,7 @@
                 {
                     "nome": "info_08",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -981,7 +927,7 @@
                 {
                     "nome": "info_08",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1109,7 +1055,7 @@
                 {
                     "nome": "info_07",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1170,7 +1116,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1194,7 +1140,7 @@
                 {
                     "nome": "info_02",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1213,7 +1159,7 @@
                 {
                     "nome": "info_03",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1313,7 +1259,7 @@
                 {
                     "nome": "info_02",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1357,7 +1303,7 @@
                 {
                     "nome": "info_05",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1386,7 +1332,7 @@
                 {
                     "nome": "info_07",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1481,7 +1427,7 @@
                 {
                     "nome": "info_02",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1561,7 +1507,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1700,7 +1646,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1744,7 +1690,7 @@
                 {
                     "nome": "info_04",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1768,7 +1714,7 @@
                 {
                     "nome": "info_05",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1866,7 +1812,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {
@@ -1895,7 +1841,7 @@
                 {
                     "nome": "info_02",
                     "tipo": "galeria",
-                    "imagem": "info",
+                    "imagem": "galery",
                     "galeria": {
                         "imagens": [
                             {

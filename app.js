@@ -946,6 +946,27 @@ function setUpScene(sceneId) {
 
           cena.appendChild(item);
         }
+
+        if (hotspot.tipo === "shop") {
+          item.addEventListener("click", (event) => {
+            event.preventDefault();
+            let titulo = "";
+            if (hotspot.info.titulo) {
+              titulo = hotspot.info.titulo;
+            }
+
+            openPopup(hotspot.info.imagem, hotspot.info.texto, titulo);
+          });
+          item.setAttribute("scale", "1 1 1");
+          if(hotspot.type === "float") {
+            item.object3D.rotation.copy(itemHotspot.rotation);
+          } else {
+            item.setAttribute("always-face-camera", "");
+          }
+
+          cena.appendChild(item);
+        }
+
         if (hotspot.tipo === "tutorial") {
           item.addEventListener("click", (event) => {
             event.preventDefault();
