@@ -151,8 +151,9 @@
                     "tipo": "shop",
                     "imagem": "shop",
                     "info": {
-                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
-                        "imagem": "D"
+                        "titulo": "Karina Vilela Estética",
+                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados.  ",
+                        "imagem": "loja-1"
                     }
                 }
             ]

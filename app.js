@@ -310,6 +310,121 @@ function openPopup(i, t, titulo) {
   });
 }
 
+function openShop(i, t, titulo) {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      userAgent
+    )
+  ) {
+    document.getElementById("fixed-buttons-div-2").style.visibility = "hidden";
+    document.getElementById("fixed-buttons-div").style.visibility = "hidden";
+  }
+  var img1 = document.getElementById(i);
+  var img2 = document.getElementById("logo-loja");
+  var botaoLerMais = document.getElementById("botao-leia-mais-loja");
+  var botaoVoltar = document.getElementById("botao-voltar-loja");
+  var popupOverlay = document.getElementById("popup-overlay");
+  var fechar = document.getElementById("fechar-botao-loja");
+
+  if (titulo.length > 1) {
+    document.getElementById("shop-titulo").textContent = titulo;
+  } else {
+    document.getElementById("shop-titulo").textContent = "";
+  }
+
+  if (t.length > 250) {
+    botaoLerMais.classList.remove("oculto");
+  } else {
+    botaoLerMais.classList.add("oculto");
+  }
+
+  var srcImg1 = img1.src;
+
+  document.getElementById("carregando-shop").style.visibility = "visible";
+  document.getElementById("base-shop").style.visibility = "hidden";
+  img2.style.visibility = "hidden";
+
+  img2.onload = function () {
+    img2.style.visibility = "visible";
+    document.getElementById("carregando-shop").style.visibility = "hidden";
+    document.getElementById("base-shop").style.visibility = "visible";
+    img2.style.display = "flex";
+
+    var galeria = document.getElementById("shop-panel");
+    if (img2.naturalWidth > img2.naturalHeight) {
+      galeria.classList.remove("horizontal");
+      galeria.classList.add("vertical");
+      document
+        .getElementById("popup-overlay-img")
+        .classList.remove("overlay-vertical");
+      document
+        .getElementById("popup-overlay-img")
+        .classList.add("overlay-horizontal");
+
+      img2.classList.remove("galeria-img-vertical");
+      img2.classList.add("galeria-img-horizontal");
+    } else {
+      galeria.classList.remove("horizontal");
+      galeria.classList.add("vertical");
+      document
+        .getElementById("popup-overlay-img")
+        .classList.remove("overlay-vertical");
+      document
+        .getElementById("popup-overlay-img")
+        .classList.add("overlay-horizontal");
+
+      img2.classList.remove("galeria-img-vertical");
+      img2.classList.add("galeria-img-horizontal");
+    }
+
+    botaoLerMais.classList.remove("oculto");
+    botaoVoltar.classList.add("oculto");
+    texto.textContent = textoLimitado;
+    
+    if (t.length > 250) {
+      botaoLerMais.classList.remove("oculto");
+    } else {
+      botaoLerMais.classList.add("oculto");
+    }
+
+    const sobreposicao = document.getElementById("sobreposicao");
+    sobreposicao.style.pointerEvents = "auto";
+  };
+
+  img2.src = srcImg1;
+
+  var elemento = document.getElementById("shop-panel");
+  var texto = document.getElementById("shop-texto");
+
+  const textoLimitado = limitarTexto(t);
+  texto.textContent = textoLimitado;
+  elemento.style.display = "flex";
+
+  botaoLerMais.addEventListener("click", () => {
+    img2.style.display = "none";
+    botaoLerMais.classList.add("oculto");
+    botaoVoltar.classList.remove("oculto");
+    texto.textContent = t;
+
+    document.getElementById("shop-panel").classList.add("vertical");
+    document.getElementById("shop-panel").classList.remove("horizontal");
+  });
+
+  botaoVoltar.addEventListener("click", () => {
+    img2.style.display = "flex";
+    botaoLerMais.classList.remove("oculto");
+    botaoVoltar.classList.add("oculto");
+    texto.textContent = textoLimitado;
+
+    openShop(i, t, titulo);
+  });
+
+  img2.addEventListener("click", () => {
+    popupOverlay.style.display = "flex";
+    document.getElementById("popup-overlay-img").src = img2.src;
+  });
+}
+
 function closePopup() {
   document.getElementById("fixed-buttons-div-2").style.visibility = "visible";
   document.getElementById("fixed-buttons-div").style.visibility = "visible";
@@ -323,7 +438,9 @@ function closePopup() {
   const sobreposicao = document.getElementById("sobreposicao");
   sobreposicao.style.pointerEvents = "none";
   var elemento = document.getElementById("popup");
+  var shop = document.getElementById("shop-panel");
   elemento.style.display = "none";
+  shop.style.display = "none";
   console.log("fechar");
   document.querySelector("#tela-tutorial").style.display = "none";
   document.querySelector("#tela-tutorial-2").style.display = "none";
@@ -955,7 +1072,7 @@ function setUpScene(sceneId) {
               titulo = hotspot.info.titulo;
             }
 
-            openPopup(hotspot.info.imagem, hotspot.info.texto, titulo);
+            openShop(hotspot.info.imagem, hotspot.info.texto, titulo);
           });
           item.setAttribute("scale", "1 1 1");
           if(hotspot.type === "float") {
