@@ -10,6 +10,14 @@
                     "proximaCena": {
                         "cena": "1"
                     }
+                },{
+                    "nome": "info_01",
+                    "tipo": "shop",
+                    "imagem": "drone",
+                    "info": {
+                        "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
+                        "imagem": "C"
+                    }
                 },
                 {
                     "nome": "video_btn_01",
@@ -271,7 +279,7 @@
                     "tipo": "cena",
                     "imagem": "hotspot",
                     "proximaCena": {
-                        "cena": "17"
+                        "cena": "3"
                     }
                 },
                 {
@@ -285,7 +293,7 @@
                 {
                     "nome": "info_01",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "wc",
                     "info": {
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
                         "imagem": "C"
@@ -293,83 +301,11 @@
                 },
                 {
                     "nome": "info_02",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
                         "imagem": "D"
-                    }
-                },
-                {
-                    "nome": "info_03",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Mais do que um sentimento que nos une. É o nosso propósito como grupo, nossa razão de existir.",
-                        "imagem": "B"
-                    }
-                },
-                {
-                    "nome": "info_04",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "urso",
-                        "imagem": "info-imagem-01"
-                    }
-                },
-                {
-                    "nome": "info_05",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
-                    }
-                },
-                {
-                    "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
-                    }
-                },
-                {
-                    "nome": "info_07",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Lins, que era três anos mais velho, convidou Dema para ingressar na sociedade assim que comprou a loja de um tio. A razão social registrada foi Lins Sperotto Ferrão e Irmão. Os dois irmãos inauguraram juntos ‘A Principal’ e ali começaram o seu negócio com mercadorias para o público masculino.  Nos mais de 50 anos que, unidos, administraram a empresa (até o falecimento de Lins em 2005), sempre mantiveram o clima de respeito, companheirismo e irmandade.",
-                        "imagem": "info-imagem-A-PRETO"
-                    }
-                },
-                {
-                    "nome": "video_btn_01",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_01",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_02",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_02",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_03",
-                    "tipo": "video",
-                    "imagem": "video",
-                    "video": {
-                        "nome": "video_03",
-                        "video": "03"
                     }
                 }
             ]
@@ -382,7 +318,7 @@
                     "tipo": "cena",
                     "imagem": "hotspot",
                     "proximaCena": {
-                        "cena": "4"
+                        "cena": "6"
                     }
                 },
                 {
@@ -390,21 +326,13 @@
                     "tipo": "cena",
                     "imagem": "hotspot",
                     "proximaCena": {
-                        "cena": "7"
-                    }
-                },
-                {
-                    "nome": "hotspot_03",
-                    "tipo": "cena",
-                    "imagem": "hotspot",
-                    "proximaCena": {
-                        "cena": "6"
+                        "cena": "4"
                     }
                 },
                 {
                     "nome": "info_01",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
                         "imagem": "C"
@@ -422,7 +350,7 @@
                 {
                     "nome": "info_03",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "parking",
                     "info": {
                         "texto": "Mais do que um sentimento que nos une. É o nosso propósito como grupo, nossa razão de existir.",
                         "imagem": "B"
@@ -430,8 +358,8 @@
                 },
                 {
                     "nome": "info_04",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "urso",
                         "imagem": "info-imagem-01"
@@ -439,24 +367,6 @@
                 },
                 {
                     "nome": "info_05",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
-                    }
-                },
-                {
-                    "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
-                    }
-                },
-                {
-                    "nome": "info_07",
                     "tipo": "galeria",
                     "imagem": "galery",
                     "galeria": {
@@ -516,10 +426,18 @@
                 },
                 {
                     "nome": "hotspot_02",
-                    "tipo": "sala",
-                    "imagem": "hotspot_new",
+                    "tipo": "cena",
+                    "imagem": "hotspot",
                     "proximaCena": {
-                        "cena": "11"
+                        "cena": "7"
+                    }
+                },{
+                    "nome": "info_01",
+                    "tipo": "info",
+                    "imagem": "info",
+                    "info": {
+                        "texto": "Agora, você está prestes a entrar na sala de Lins Ferrão, onde o empresário dirigiu as Lojas Pompéia. Neste ambiente, estão muitas recordações, conservadas pela família desde 2005 como forma de manter viva a história do patriarca e o seu legado. Nesta sala, Lins e Dema também se reuniam e daqui saíam todas as decisões de comum acordo entre os irmãos. Lins sempre fez questão de manter todos por perto, ensinando através de lições diárias espontâneas e dos treinamentos - os quais fazia sempre questão de liderar. Sua relação com a família, com os funcionários, os processos muito próprios, seus hobbies e paixões faziam dele um homem singular. Seja curioso como Lins. Você é nosso convidado para entrar neste universo particular tão inspirador! ",
+                        "imagem": "info-imagem-B-PRETO"
                     }
                 },
                 {
@@ -534,7 +452,7 @@
                 {
                     "nome": "info_03",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "food",
                     "info": {
                         "texto": "Mais do que um sentimento que nos une. É o nosso propósito como grupo, nossa razão de existir.",
                         "imagem": "B"
@@ -543,128 +461,10 @@
                 {
                     "nome": "info_04",
                     "tipo": "info",
-                    "imagem": "info",
+                    "imagem": "food",
                     "info": {
                         "texto": "urso",
                         "imagem": "info-imagem-01"
-                    }
-                },
-                {
-                    "nome": "info_05",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
-                    }
-                },
-                {
-                    "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
-                    }
-                },
-                {
-                    "nome": "info_07",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "porco",
-                        "imagem": "info-imagem-01"
-                    }
-                },
-                {
-                    "nome": "video_btn_01",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_01",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_02",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_02",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_03",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_03",
-                        "video": "02"
-                    }
-                },
-                {
-                    "nome": "info_01",
-                    "tipo": "galeria",
-                    "imagem": "galery",
-                    "galeria": {
-                        "imagens": [
-                            {
-                                "titulo": "",
-                                "texto": "Além de Lins, o casal Júlia e Ozório Ferrão teve mais onze filhos, entre eles o irmão e futuro sócio, Valdemar Ferrão, conhecido como Dema. Com a perda do pai aos 7 anos, desde cedo Lins ajudou a mãe no sustento da família.",
-                                "imagem": ""
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Aos 12, já trabalhava em uma fazenda durante o dia e em uma venda durante a noite. Iniciava aí a semente da atividade comercial.  ",
-                                "imagem": ""
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Em 1944, chega a Camaquã, convidado por outro tio, também para trabalhar no comércio. No final dos anos 40, ingressa no exército, onde fica por dois anos, período em que aprende muito com a experiência militar.",
-                                "imagem": "b-verde-01"
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "O contrato das organizações Lins Ferrão & Cia LTDA foi assinado em 1 de dezembro de 1953. O documento foi elaborado por Lins com base em um curso de contabilidade por correspondência e até hoje é modelo para os contratos da empresa.   ",
-                                "imagem": ""
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Iniciava-se assim o que mais tarde mudaria de nome para Lojas Pompéia. Os irmãos trabalhavam nas tarefas administrativas, além de atender aos clientes. Eles também contavam com a ajuda das irmãs Nena e Alzira. Nessa época, trabalhavam junto a Lins e Dema os sobrinhos Luiz Baptistella e Cláudio Ferrão.",
-                                "imagem": "b-verde-02"
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Sua passagem pelo Poder Legislativo Camaquense como vereador, entre 1972 e 1976, foi um projeto de significativa importância para todos os segmentos da comunidade.",
-                                "imagem": ""
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Como pai, Lins foi sempre muito presente e manteve viva a paixão pelo comércio, sempre envolvendo a família nas atividades da empresa.",
-                                "imagem": "b-verde-07B"
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "A partir dos anos 80, a 2ª geração da família Ferrão, filhos e filhas de Lins e de Valdemar, começou a se envolver nos negócios, assumindo a direção de departamentos importantes e trazendo inovação.",
-                                "imagem": "b-verde-07"
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Lins participou de diversas atividades empresariais e sociais nos anos 90, entre elas: integrou a Associação do Comércio Varejista de Camaquã, o Conselho Fiscal do Sindicato do Comércio Varejista de Camaquã, presidiu a ACIC, fez parte da publicação 'Empresários que Venceram no Rio Grande do Sul', recebeu da Câmara Municipal de Vereadores o título honorífico de Cidadão de Camaquã, foi um dos grandes colaboradores para a compra do terreno onde funciona a Subestação da C.E.E.E, entre outras.",
-                                "imagem": ""
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Nos anos 90, os filhos Carmen, Fernanda e Gustavo já atuavam na empresa.",
-                                "imagem": "b-verde-08"
-                            },
-                            {
-                                "titulo": "",
-                                "texto": "Avanços tecnológicos, evoluções em conceitos empresariais e outras mudanças marcaram os anos 2000 e Lins Ferrão seguia forte em seu papel de administrador, sempre muito presente quando o assunto era Lojas Pompéia.",
-                                "imagem": "b-verde-09"
-                            }
-                        ]
                     }
                 }
             ]
@@ -677,7 +477,7 @@
                     "tipo": "cena",
                     "imagem": "hotspot",
                     "proximaCena": {
-                        "cena": "5"
+                        "cena": "7"
                     }
                 },
                 {
@@ -690,8 +490,8 @@
                 },
                 {
                     "nome": "info_01",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
                         "imagem": "C"
@@ -699,8 +499,8 @@
                 },
                 {
                     "nome": "info_02",
-                    "tipo": "info",
-                    "imagem": "info",
+                    "tipo": "shop",
+                    "imagem": "shop",
                     "info": {
                         "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
                         "imagem": "D"
@@ -708,42 +508,6 @@
                 },
                 {
                     "nome": "info_03",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Mais do que um sentimento que nos une. É o nosso propósito como grupo, nossa razão de existir.",
-                        "imagem": "B"
-                    }
-                },
-                {
-                    "nome": "info_04",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "urso",
-                        "imagem": "info-imagem-01"
-                    }
-                },
-                {
-                    "nome": "info_05",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
-                    }
-                },
-                {
-                    "nome": "info_06",
-                    "tipo": "info",
-                    "imagem": "info",
-                    "info": {
-                        "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
-                    }
-                },
-                {
-                    "nome": "info_07",
                     "tipo": "galeria",
                     "imagem": "galery",
                     "galeria": {
@@ -797,26 +561,7 @@
                     }
                 },
                 {
-                    "nome": "info_08",
-                    "tipo": "galeria",
-                    "imagem": "galery",
-                    "galeria": {
-                        "imagens": [
-                            {
-                                "titulo": "Sede Iolanda Ferrão (Porto Alegre)",
-                                "texto": "Atualmente, somando quase 3.500 colaboradores, o grupo está presente em mais de 140 lojas físicas espalhadas pelo Rio Grande do Sul e Santa Catarina, em suas sedes administrativas de Camaquã e Porto Alegre, e uma operação de e-commerce que leva o nome das marcas a todo o Brasil. ‘Vestir o mundo com orgulho’ é o propósito de todos que fazem parte do Grupo Lins Ferrão. Propósito que é colocado em prática a partir dos quatro valores: O cliente é tudo pra nós; Respeitamos todos os compromissos; A gente gosta de gente; Inovamos para evoluir sempre.",
-                                "imagem": "G-01"
-                            },
-                            {
-                                "titulo": "Matriz (Camaquã)",
-                                "texto": "Atualmente, somando quase 3.500 colaboradores, o grupo está presente em mais de 140 lojas físicas espalhadas pelo Rio Grande do Sul e Santa Catarina, em suas sedes administrativas de Camaquã e Porto Alegre, e uma operação de e-commerce que leva o nome das marcas a todo o Brasil. ‘Vestir o mundo com orgulho’ é o propósito de todos que fazem parte do Grupo Lins Ferrão. Propósito que é colocado em prática a partir dos quatro valores: O cliente é tudo pra nós; Respeitamos todos os compromissos; A gente gosta de gente; Inovamos para evoluir sempre.",
-                                "imagem": "G-02"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "nome": "info_09",
+                    "nome": "info_04",
                     "tipo": "link",
                     "imagem": "link",
                     "link": {
@@ -824,29 +569,11 @@
                     }
                 },
                 {
-                    "nome": "info_010",
+                    "nome": "info_05",
                     "tipo": "link",
                     "imagem": "link",
                     "link": {
                         "url": "https://www.lojaspompeia.com/"
-                    }
-                },
-                {
-                    "nome": "video_btn_01",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_01",
-                        "video": "01"
-                    }
-                },
-                {
-                    "nome": "video_btn_02",
-                    "tipo": "video-static",
-                    "imagem": "audio",
-                    "video": {
-                        "nome": "video_02",
-                        "video": "01"
                     }
                 }
             ]
