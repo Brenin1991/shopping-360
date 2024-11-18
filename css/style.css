@@ -5,9 +5,12 @@
   /* Adicione outros formatos de fonte e configurações conforme necessário */
 }
 
+html,
+body,
 a-scene {
-    touch-action: none;
-  }
+  touch-action: none;
+}
+
 
 body {
   font-family: "Raleway-Variable", sans-serif;
