@@ -135,29 +135,29 @@ a-scene {
 }
 
 #popup {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(20px); /* Começa abaixo da posição central */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #shop-panel {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(20px); /* Começa abaixo da posição central */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 #infoMusica {
@@ -400,6 +400,7 @@ a-scene {
     border-radius: 20px;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
     padding: 50px;
     transition: opacity 0.5s ease;
   }
@@ -416,6 +417,7 @@ a-scene {
     border-radius: 20px;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
     padding: 50px;
     transition: opacity 0.5s ease;
   }
@@ -912,6 +914,7 @@ a-scene {
     border-radius: 20px;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
     padding: 50px;
     transition: opacity 0.5s ease;
   }
@@ -925,6 +928,7 @@ a-scene {
     border-radius: 20px;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%) translateY(20px);
     padding: 50px;
     transition: opacity 0.5s ease;
   }
@@ -1523,25 +1527,35 @@ a-scene {
   z-index: 2;
 }
 
-/* Animação de fade in */
+/* Animação de fade in e movimento de baixo para cima */
 #shop-panel.fade-in {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Animação de fade out */
-#shop-panel.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-#popup.fade-in {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Animação de fade out */
-#popup.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animação de fade out e movimento de cima para fora */
+  #shop-panel.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animação de fade in e movimento de baixo para cima para o popup */
+  #popup.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animação de fade out e movimento de cima para fora para o popup */
+  #popup.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Estado inicial dos elementos */
+  
