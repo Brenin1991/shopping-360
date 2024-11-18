@@ -1505,11 +1505,13 @@ a-scene {
 
 #contact-panel a {
   text-decoration: none;
+  margin-top: 5%;
 }
 
 #contact-panel img {
   width: 25px;
   margin: 5%;
+  
   cursor: pointer;
 }
 
