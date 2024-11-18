@@ -278,12 +278,12 @@ function openPopup(i, t, titulo) {
 
   img2.src = srcImg1;
 
-  var elemento = document.getElementById("popup");
   var texto = document.getElementById("popup-texto");
 
   const textoLimitado = limitarTexto(t);
   texto.textContent = textoLimitado;
-  elemento.style.display = "flex";
+  
+  showPopup();
 
   botaoLerMais.addEventListener("click", () => {
     img2.style.display = "none";
@@ -393,12 +393,12 @@ function openShop(i, t, titulo) {
 
   img2.src = srcImg1;
 
-  var elemento = document.getElementById("shop-panel");
   var texto = document.getElementById("shop-texto");
 
   const textoLimitado = limitarTexto(t);
   texto.textContent = textoLimitado;
-  elemento.style.display = "flex";
+
+  showShopPanel();
 
   botaoLerMais.addEventListener("click", () => {
     img2.style.display = "none";
@@ -437,10 +437,10 @@ function closePopup() {
   }
   const sobreposicao = document.getElementById("sobreposicao");
   sobreposicao.style.pointerEvents = "none";
-  var elemento = document.getElementById("popup");
-  var shop = document.getElementById("shop-panel");
-  elemento.style.display = "none";
-  shop.style.display = "none";
+
+  hidePopup();
+  hideShopPanel();
+
   console.log("fechar");
   document.querySelector("#tela-tutorial").style.display = "none";
   document.querySelector("#tela-tutorial-2").style.display = "none";
@@ -1311,3 +1311,40 @@ botaoInfoMusica.style.backgroundImage = 'url("assets/informacao-hover.png")';
 //});
 
 ///////////////////////////////////////// MOBILE OR DESKTOP /////////////////////////////////////////////////
+
+function showPopup() {
+  const elemento = document.getElementById("popup");
+  elemento.classList.remove("fade-out");
+  elemento.classList.add("fade-in");
+  elemento.style.display = "flex";
+}
+
+function hidePopup() {
+  const elemento = document.getElementById("popup");
+  elemento.classList.remove("fade-in");
+  elemento.classList.add("fade-out");
+
+  // Espera a animação terminar antes de esconder a div
+  setTimeout(() => {
+    //elemento.style.display = "none";
+  }, 500); // Tempo em milissegundos (0.5s, igual ao tempo da transição)
+}
+
+function showShopPanel() {
+  const elemento = document.getElementById("shop-panel");
+  elemento.classList.remove("fade-out");
+  elemento.classList.add("fade-in");
+  elemento.style.display = "flex";
+}
+
+function hideShopPanel() {
+  const elemento = document.getElementById("shop-panel");
+  elemento.classList.remove("fade-in");
+  elemento.classList.add("fade-out");
+
+  // Espera a animação terminar antes de esconder a div
+  setTimeout(() => {
+    //elemento.style.display = "none";
+  }, 500); // Tempo em milissegundos (0.5s, igual ao tempo da transição)
+}
+
