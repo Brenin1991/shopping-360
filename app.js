@@ -832,46 +832,74 @@ function trocarImagem(passo) {
 
 function setUpGalery() {}
 
-function updateScene(sceneId) {
-  if (sceneId == 6) {
-    document.getElementById("02").currentTime = 0;
-    document.getElementById("02").play();
-  } else {
-    document.getElementById("02").currentTime = 0;
-    document.getElementById("02").pause();
+function animateFov(startFov, endFov, duration, callback) {
+  const camera = document.querySelector("a-camera");
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+    const currentFov = startFov + (endFov - startFov) * progress;
+
+    camera.setAttribute("fov", currentFov);
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    } else if (callback) {
+      callback();
+    }
   }
 
-  console.log(scenes.scenes[sceneId].modelo);
-  // Remover modelo atual
-  const sky = document.querySelector("#modeloGltf");
-  const ceu = document.querySelector("#imagem-360");
-  sky.parentNode.removeChild(sky);
-
-  // Criar novo elemento com o segundo modelo e adicioná-lo à cena
-  var novoModelo = document.createElement("a-entity");
-  novoModelo.setAttribute("gltf-model", "#" + scenes.scenes[sceneId].modelo);
-  //novoModelo.setAttribute('id', 'modeloGltf');
-  novoModelo.id = "modeloGltf";
-  document.querySelector("a-scene").appendChild(novoModelo);
-
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      userAgent
-    )
-  ) {
-    ceu.setAttribute(
-      "src",
-      "#" + scenes.scenes[sceneId].modelo + "-360-mobile"
-    );
-    console.log("Dispositivo Móvel");
-  } else {
-    ceu.setAttribute("src", "#" + scenes.scenes[sceneId].modelo + "-360");
-    console.log("Desktop ou Dispositivo Desconhecido");
-  }
-  console.log(sceneId);
-  //setTimeout(function() {
-  setUpScene(sceneId);
+  requestAnimationFrame(step);
 }
+
+function updateScene(sceneId) {
+  // Iniciar animação de zoom-in (aumentar FOV)
+  animateFov(70, 90, 500, () => {
+    // Troca de cena após o zoom-in
+    if (sceneId == 6) {
+      document.getElementById("02").currentTime = 0;
+      document.getElementById("02").play();
+    } else {
+      document.getElementById("02").currentTime = 0;
+      document.getElementById("02").pause();
+    }
+
+    console.log(scenes.scenes[sceneId].modelo);
+    // Remover modelo atual
+    const sky = document.querySelector("#modeloGltf");
+    const ceu = document.querySelector("#imagem-360");
+    sky.parentNode.removeChild(sky);
+
+    // Criar novo elemento com o segundo modelo e adicioná-lo à cena
+    var novoModelo = document.createElement("a-entity");
+    novoModelo.setAttribute("gltf-model", "#" + scenes.scenes[sceneId].modelo);
+    novoModelo.id = "modeloGltf";
+    document.querySelector("a-scene").appendChild(novoModelo);
+
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      )
+    ) {
+      ceu.setAttribute(
+        "src",
+        "#" + scenes.scenes[sceneId].modelo + "-360-mobile"
+      );
+      console.log("Dispositivo Móvel");
+    } else {
+      ceu.setAttribute("src", "#" + scenes.scenes[sceneId].modelo + "-360");
+      console.log("Desktop ou Dispositivo Desconhecido");
+    }
+
+    // Zoom-out após a troca da cena
+    animateFov(90, 70, 500);
+
+    console.log(sceneId);
+    setUpScene(sceneId);
+  });
+}
+
 
 var camera = document.getElementById("myCam");
 
