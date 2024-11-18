@@ -142,8 +142,9 @@
                     "tipo": "shop",
                     "imagem": "shop",
                     "info": {
+                        "titulo": "Jaqueline Silva Estética",
                         "texto": "Valorizamos e reconhecemos as nossas pessoas. Vestimos afeto e respeito com os colaboradores, nossa comunidade, clientes e parceiros. ",
-                        "imagem": "C"
+                        "imagem": "loja-2"
                     }
                 },
                 {
@@ -152,7 +153,7 @@
                     "imagem": "shop",
                     "info": {
                         "titulo": "Karina Vilela Estética",
-                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados.  ",
+                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados.   ",
                         "imagem": "loja-1"
                     }
                 }
@@ -188,11 +189,12 @@
                 },
                 {
                     "nome": "info_02",
-                    "tipo": "info",
+                    "tipo": "shop",
                     "imagem": "food",
                     "info": {
-                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
-                        "imagem": "D"
+                        "titulo": "Borcelle Burguer",
+                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
+                        "imagem": "loja-5"
                     }
                 },
                 {
@@ -215,11 +217,12 @@
                 },
                 {
                     "nome": "info_05",
-                    "tipo": "info",
+                    "tipo": "shop",
                     "imagem": "food",
                     "info": {
+                        "titulo": "Korina Chinese Food",
                         "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
-                        "imagem": "E"
+                        "imagem": "loja-7"
                     }
                 },
                 {
@@ -227,8 +230,9 @@
                     "tipo": "shop",
                     "imagem": "shop",
                     "info": {
+                        "titulo": "Online Shop",
                         "texto": "Somos éticos e respeitosos, vestir responsabilidade é a base do nosso jeito de ser.  ",
-                        "imagem": "F"
+                        "imagem": "loja-3"
                     }
                 },
                 {
@@ -305,8 +309,9 @@
                     "tipo": "shop",
                     "imagem": "shop",
                     "info": {
-                        "texto": "Buscamos crescer dia a dia para inovar e vestir nosso mundo com os melhores resultados. ",
-                        "imagem": "D"
+                        "titulo": "Street Style",
+                        "texto": "Vestir de superação as expectativas dos nossos clientes é a razão maior da nossa existência.  ",
+                        "imagem": "loja-9"
                     }
                 }
             ]

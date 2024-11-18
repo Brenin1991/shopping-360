@@ -1511,3 +1511,21 @@ a-scene {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destaque */
 }
 
+#contact-panel a {
+    text-decoration: none;
+  }
+  
+  #contact-panel img {
+    width: 25px;
+    margin: 10%;
+    cursor: pointer;
+  }
+
+#carregando-shop {
+    position: absolute;
+}
+
+#base-shop {
+    z-index: 2;
+}
+
