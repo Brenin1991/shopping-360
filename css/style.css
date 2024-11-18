@@ -1565,4 +1565,8 @@ a-scene {
   }
   
   /* Estado inicial dos elementos */
+
+  .botao-popup {
+    border-radius: 15px;
+  }
   
