@@ -855,7 +855,7 @@ function animateFov(startFov, endFov, duration, callback) {
 
 function updateScene(sceneId) {
   // Iniciar animação de zoom-in (aumentar FOV)
-  animateFov(70, 90, 500, () => {
+  animateFov(100, 90, 70, () => {
     // Troca de cena após o zoom-in
     if (sceneId == 6) {
       document.getElementById("02").currentTime = 0;
