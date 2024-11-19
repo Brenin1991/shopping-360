@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Raleway-Variable";
-  src: url("fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  src: url("fonts/OpenSans-VariableFont_wdth\,wght.ttf") format("truetype");
   /* O caminho '../fonts/SuaFonte.ttf' referencia a pasta 'fonts' */
   /* Adicione outros formatos de fonte e configurações conforme necessário */
 }
@@ -1516,7 +1516,7 @@ a-scene {
   object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
   border-radius: 50%; /* Torna a imagem redonda */
   border: 2px solid #ddd; /* Opcional: adiciona uma borda */
-  box-shadow: 2 4px 6px rgba(0, 0, 0, 0.5); /* Opcional: sombra para destaque */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #contact-panel a {
@@ -1601,7 +1601,7 @@ a-scene {
   
   .fade-out {
     opacity: 1;
-    transition: opacity 0.5s ease-out;
+    transition: opacity 0s ease-out;
   }
   
   .fade-out.hide {
@@ -1610,5 +1610,24 @@ a-scene {
 
   #galeria-img, #popup-img, #galeria-video {
     border-radius: 5px;
-    box-shadow: 2 4px 6px rgba(0, 0, 0, 0.5); /* Opcional: sombra para destaque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+
+  button {
+    
+  }
+
+  .loader-icon {
+    width: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

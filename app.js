@@ -660,6 +660,7 @@ function trocarImagem(passo) {
 
   imagemEl.classList.remove("fade-in");
   videoEl.classList.remove("fade-in");
+  funcaoEl.classList.remove("fade-in");
 
   console.log(imagensGaleria[imagemAtual].imagem);
   var img1 = document.getElementById(imagensGaleria[imagemAtual].imagem);
@@ -743,6 +744,9 @@ function trocarImagem(passo) {
       imagemEl.classList.remove("fade-in", "show", "fade-out", "hide");
       imagemEl.classList.add("fade-out", "hide");
 
+      funcaoEl.classList.remove("fade-in", "show", "fade-out", "hide");
+      funcaoEl.classList.add("fade-out", "hide");
+
       setTimeout(() => {
         imagemEl.style.display = "block";
         var srcImg1 = img1.src;
@@ -752,6 +756,9 @@ function trocarImagem(passo) {
     
         imagemEl.classList.remove("fade-out", "hide");
         imagemEl.classList.add("fade-in", "show");
+
+        funcaoEl.classList.remove("fade-out", "hide");
+        funcaoEl.classList.add("fade-in", "show");
       }, 500);
     } else if (img1.tagName && img1.tagName.toLowerCase() === "video") {
       document.getElementById("galeriaVideoAudio").style.visibility = "visible";
@@ -805,7 +812,7 @@ function trocarImagem(passo) {
       });
 
       videoEl.classList.remove("fade-in", "show", "fade-out", "hide");
-  videoEl.classList.add("fade-out", "hide");
+      videoEl.classList.add("fade-out", "hide");
 
   setTimeout(() => {
     var srcImg1 = img1.src;
