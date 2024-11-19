@@ -440,11 +440,11 @@ function closePopup() {
 
   hidePopup();
   hideShopPanel();
+  hideGalery();
 
   console.log("fechar");
   document.querySelector("#tela-tutorial").style.display = "none";
   document.querySelector("#tela-tutorial-2").style.display = "none";
-  closeGaleria();
 }
 
 function closePopupOverlay() {
@@ -468,25 +468,11 @@ function openGaleria(i) {
   contador = 0;
   trocarImagem(0);
 
-  var elemento = document.getElementById("galeria");
-  elemento.style.display = "flex";
-
-  elemento.classList.remove("horizontal");
-  elemento.classList.add("vertical");
+  showGalery();
+  
 
   const sobreposicao = document.getElementById("sobreposicao");
   sobreposicao.style.pointerEvents = "auto";
-}
-
-function closeGaleria() {
-  document.getElementById("bt-esquerdo").style.visibility = "visible";
-  document.getElementById("bt-direito").style.visibility = "visible";
-  const videoEl = document.querySelector("#galeria-video");
-  const sobreposicao = document.getElementById("sobreposicao");
-  sobreposicao.style.pointerEvents = "none";
-  var elemento = document.getElementById("galeria");
-  elemento.style.display = "none";
-  videoEl.pause();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -639,6 +625,9 @@ function trocarImagem(passo) {
   document.getElementById("texto").style.visibility = "hidden";
   document.getElementById("carregando-galeria").style.visibility = "visible";
 
+  // Remover transição anterior
+  
+
   imagemAtual += passo;
   contador = imagemAtual;
 
@@ -668,6 +657,9 @@ function trocarImagem(passo) {
   videoEl.pause();
 
   imagemEl.style.visibility = "hidden";
+
+  imagemEl.classList.remove("fade-in");
+  videoEl.classList.remove("fade-in");
 
   console.log(imagensGaleria[imagemAtual].imagem);
   var img1 = document.getElementById(imagensGaleria[imagemAtual].imagem);
@@ -747,6 +739,20 @@ function trocarImagem(passo) {
 
         document.getElementById("texto").classList.add("closeTexto");
       });
+
+      imagemEl.classList.remove("fade-in", "show", "fade-out", "hide");
+      imagemEl.classList.add("fade-out", "hide");
+
+      setTimeout(() => {
+        imagemEl.style.display = "block";
+        var srcImg1 = img1.src;
+        videoEl.pause();
+        imagemEl.src = srcImg1;
+        verificarOrientacao(imagemEl);
+    
+        imagemEl.classList.remove("fade-out", "hide");
+        imagemEl.classList.add("fade-in", "show");
+      }, 500);
     } else if (img1.tagName && img1.tagName.toLowerCase() === "video") {
       document.getElementById("galeriaVideoAudio").style.visibility = "visible";
       document.getElementById("carregando-galeria").style.visibility = "hidden";
@@ -797,6 +803,22 @@ function trocarImagem(passo) {
         botaoVoltar.classList.add("oculto");
         funcaoEl.innerText = textoLimitado;
       });
+
+      videoEl.classList.remove("fade-in", "show", "fade-out", "hide");
+  videoEl.classList.add("fade-out", "hide");
+
+  setTimeout(() => {
+    var srcImg1 = img1.src;
+    videoEl.style.display = "block";
+    imagemEl.style.display = "none";
+    videoEl.src = srcImg1;
+    videoEl.play();
+    videoEl.muted = true;
+
+    videoEl.classList.remove("fade-out", "hide");
+    videoEl.classList.add("fade-in", "show");
+  }, 500);
+
     } else {
       document.getElementById("galeriaVideoAudio").style.visibility = "hidden";
       console.log("Este não é nem uma imagem nem um vídeo.");
@@ -1375,4 +1397,30 @@ function hideShopPanel() {
     //elemento.style.display = "none";
   }, 500); // Tempo em milissegundos (0.5s, igual ao tempo da transição)
 }
+
+function showGalery() {
+  const elemento = document.getElementById("galeria");
+  elemento.classList.remove("fade-out");
+  elemento.classList.add("fade-in");
+  elemento.style.display = "flex";
+}
+
+function hideGalery() {
+  const elemento = document.getElementById("galeria");
+  elemento.classList.remove("fade-in");
+  elemento.classList.add("fade-out");
+
+  document.getElementById("bt-esquerdo").style.visibility = "visible";
+  document.getElementById("bt-direito").style.visibility = "visible";
+  const videoEl = document.querySelector("#galeria-video");
+  const sobreposicao = document.getElementById("sobreposicao");
+  sobreposicao.style.pointerEvents = "none";
+  videoEl.pause();
+
+  // Espera a animação terminar antes de esconder a div
+  setTimeout(() => {
+    //elemento.style.display = "none";
+  }, 500); // Tempo em milissegundos (0.5s, igual ao tempo da transição)
+}
+
 

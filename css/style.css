@@ -203,10 +203,12 @@ a-scene {
 }
 
 #galeria {
+    opacity: 0;
+    visibility: hidden;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateY(20px); /* Começa abaixo da posição central */
   background-color: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -503,13 +505,15 @@ a-scene {
   }
 
   #galeria {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     background-color: rgb(255, 255, 255);
     width: 90vw;
     height: 75vh;
     border-radius: 20px;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%) translateY(20px); /* Começa abaixo da posição central */
     padding: 50px;
   }
 
@@ -1005,7 +1009,8 @@ a-scene {
   }
 
   #galeria {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     background-color: rgb(255, 255, 255);
     width: 40vw;
     height: 65vh;
@@ -1511,7 +1516,7 @@ a-scene {
   object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
   border-radius: 50%; /* Torna a imagem redonda */
   border: 2px solid #ddd; /* Opcional: adiciona uma borda */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destaque */
+  box-shadow: 2 4px 6px rgba(0, 0, 0, 0.5); /* Opcional: sombra para destaque */
 }
 
 #contact-panel a {
@@ -1563,6 +1568,20 @@ a-scene {
     transform: translateY(-40px);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
+
+  #galeria.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animação de fade out e movimento de cima para fora para o popup */
+  #galeria.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
   
   /* Estado inicial dos elementos */
 
@@ -1570,3 +1589,26 @@ a-scene {
     border-radius: 15px;
   }
   
+/* Efeito de fade */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .fade-out.hide {
+    opacity: 0;
+  }
+
+  #galeria-img, #popup-img, #galeria-video {
+    border-radius: 5px;
+    box-shadow: 2 4px 6px rgba(0, 0, 0, 0.5); /* Opcional: sombra para destaque */
+  }
