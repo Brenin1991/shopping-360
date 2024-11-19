@@ -165,6 +165,20 @@ a-scene {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden; /* Garante que a barra fique dentro do contêiner */
+}
+
+#shop-panel::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30%;
+    background-color: #af7f7f8f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #infoMusica {
@@ -1519,6 +1533,9 @@ a-scene {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+#contact-panel{
+  }
+
 #contact-panel a {
   text-decoration: none;
   margin-top: 5%;
@@ -1549,8 +1566,8 @@ a-scene {
   /* Animação de fade out e movimento de cima para fora */
   #shop-panel.fade-out {
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(-40px);
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
@@ -1564,8 +1581,8 @@ a-scene {
   /* Animação de fade out e movimento de cima para fora para o popup */
   #popup.fade-out {
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(-40px);
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
@@ -1578,8 +1595,8 @@ a-scene {
   /* Animação de fade out e movimento de cima para fora para o popup */
   #galeria.fade-out {
     opacity: 0;
-    visibility: hidden;
-    transform: translateY(-40px);
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
   
