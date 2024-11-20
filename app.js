@@ -340,11 +340,23 @@ function openShop(i, t, titulo) {
 
   var srcImg1 = img1.src;
 
+  // Seleciona o elemento
+  
+
+  // Altera o background-image dinamicamente
+  
+
   document.getElementById("carregando-shop").style.visibility = "visible";
   document.getElementById("base-shop").style.visibility = "hidden";
   img2.style.visibility = "hidden";
 
   img2.onload = function () {
+    let shopPanelBg = document.getElementById("shop-panel-bg");
+    if (shopPanelBg) {
+        shopPanelBg.style.backgroundImage = `url('${img2.src}')`;
+    } else {
+        console.error("Elemento #shop-panel-bg não encontrado!");
+    }
     img2.style.visibility = "visible";
     document.getElementById("carregando-shop").style.visibility = "hidden";
     document.getElementById("base-shop").style.visibility = "visible";
@@ -1334,6 +1346,32 @@ function loadJson() {
 setUpModal();
 setUpGalery();
 loadJson();
+
+const screenOverlay = document.getElementById("fechar-botao");
+
+let startY = 0;
+let endY = 0;
+
+screenOverlay.addEventListener("touchstart", (event) => {
+  startY = event.touches[0].clientY; // Captura a posição inicial do toque no eixo Y
+});
+
+// Detecta quando o dedo se move
+screenOverlay.addEventListener("touchmove", (event) => {
+  endY = event.touches[0].clientY; // Atualiza a posição final do toque no eixo Y
+});
+
+// Detecta quando o toque termina
+screenOverlay.addEventListener("touchend", () => {
+  if (endY - startY > 50) { // Verifica se o movimento foi de cima para baixo com ao menos 50px
+      closeScreen(); // Fecha a tela
+  }
+});
+
+// Função para fechar a tela
+function closeScreen() {
+  closePopup();
+}
 
 document.getElementById("fechar-botao").addEventListener("click", function () {
   // Coloque aqui o código que deseja executar quando o botão for clicado

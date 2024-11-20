@@ -39,7 +39,7 @@ body {
 
 .closeButton {
   position: absolute;
-  height: 20px;
+  height: 40px;
   top: 3%;
   right: 3%;
 }
@@ -168,18 +168,21 @@ a-scene {
     overflow: hidden; /* Garante que a barra fique dentro do contêiner */
 }
 
-#shop-panel::before {
+#shop-panel-bg {
     content: '';
     display: block;
     width: 100%;
     height: 30%;
-    background-color: #af7f7f8f;
+    background-image: url("../assets/UI/inicio/background-inicio.png");
+    background-size: cover;
+    background-position: center;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 
 #infoMusica {
   display: none;
@@ -375,7 +378,7 @@ a-scene {
 @media only screen and (max-width: 1000px) {
   .closeButton {
     position: absolute;
-    height: 20px;
+    height: 40px;
     top: 3%;
     right: 5%;
   }
@@ -1534,6 +1537,7 @@ a-scene {
 }
 
 #contact-panel{
+  
   }
 
 #contact-panel a {
