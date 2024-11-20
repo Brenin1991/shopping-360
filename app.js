@@ -1347,30 +1347,33 @@ setUpModal();
 setUpGalery();
 loadJson();
 
-const screenOverlay = document.getElementById("fechar-botao");
+// Seleciona todas as divs que têm a classe 'swipeable'
+const swipeableDivs = document.querySelectorAll(".swipeable");
 
+// Variáveis para capturar posição inicial e final do toque
 let startY = 0;
 let endY = 0;
 
-screenOverlay.addEventListener("touchstart", (event) => {
-  startY = event.touches[0].clientY; // Captura a posição inicial do toque no eixo Y
+// Adiciona o comportamento de swipe para cada div
+swipeableDivs.forEach((div) => {
+    div.addEventListener("touchstart", (event) => {
+        startY = event.touches[0].clientY; // Captura a posição inicial do toque no eixo Y
+    });
+
+    div.addEventListener("touchmove", (event) => {
+        endY = event.touches[0].clientY; // Atualiza a posição final do toque no eixo Y
+    });
+
+    div.addEventListener("touchend", () => {
+        if (endY - startY > 50) { // Verifica se o movimento foi de cima para baixo
+            closeScreen(div); // Fecha a tela específica
+        }
+    });
 });
 
-// Detecta quando o dedo se move
-screenOverlay.addEventListener("touchmove", (event) => {
-  endY = event.touches[0].clientY; // Atualiza a posição final do toque no eixo Y
-});
-
-// Detecta quando o toque termina
-screenOverlay.addEventListener("touchend", () => {
-  if (endY - startY > 50) { // Verifica se o movimento foi de cima para baixo com ao menos 50px
-      closeScreen(); // Fecha a tela
-  }
-});
-
-// Função para fechar a tela
-function closeScreen() {
-  closePopup();
+// Função para fechar uma div específica
+function closeScreen(div) {
+    closePopup();
 }
 
 document.getElementById("fechar-botao").addEventListener("click", function () {
